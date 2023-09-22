@@ -2,17 +2,30 @@ package testerford;
 
 import java.util.Random;
 
-
 public class Motor {
     
         int revoluciones;		// La cantidad de ciclos por segundo que el motor está realizando.
-	private int aire;				// Volumen en mm3 del aire que entra a un cilindro del motor.
-	private int combustible;		// Volumen en mm3 de gasolina que entra a un cilindro del motor
-	private boolean piston;		// Indica si el pistón del cilindro está arriba (on) o abajo (on)
-	private boolean bujia;			// Indica si la bujía del cilindro está encendida o apagada
+	int aire;				// Volumen en mm3 del aire que entra a un cilindro del motor.
+	int combustible;		// Volumen en mm3 de gasolina que entra a un cilindro del motor
+	boolean piston;		// Indica si el pistón del cilindro está arriba (on) o abajo (on)
+	boolean bujia;			// Indica si la bujía del cilindro está encendida o apagada
 	boolean encendido;		// Indica si el motor se encuentra funcionando
-	private  Random r;			// Utilizado para motivos de simulación del entorno del motor.
+	Random r;			// Utilizado para motivos de simulación del entorno del motor.
 	
+        public int getRevoluciones(){
+		return revoluciones; 
+	}
+	public void  setRevoluciones(int Rev){
+		this.revoluciones = Rev;
+	}
+
+	public boolean getEncendido(){
+		return encendido;
+	}
+	public void setEncendido(boolean Newencendido){
+	 	this.encendido = Newencendido;
+	}
+        
 	/**
 	* Inicializa un nuevo objeto Motor.
 	*/
@@ -20,7 +33,7 @@ public class Motor {
 		aire = 0;
 		combustible = 0;
 		revoluciones = 0;
-		encendido = false;
+		setEncendido(false);
 		r = new Random();
 	}
 	
@@ -66,24 +79,9 @@ public class Motor {
 			residuos -= r.nextDouble();
 		}
 	}
-
-
-	public int getRevoluciones(){
-		return revoluciones; 
-	}
-	public void  setRevoluciones(int Rev){
-		this.revoluciones = Rev;
-	}
-
-	public boolean getEncendido(){
-		return encendido;
-	}
-	public void setEncendido(boolean Newencendido){
-	 	this.encendido = Newencendido;
-	}
-        
+  
         public void revolucionar(){
-            if(encendido){
+            if(getEncendido()){
                 prepararMezcla();
                 comprimirMezcla();
                 encenderMezcla();
