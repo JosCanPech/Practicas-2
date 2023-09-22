@@ -1,3 +1,9 @@
+package testerford;
+
+/**
+ *
+ * @author josue
+ */
 public class TesterFord {
 
     /**
@@ -7,7 +13,7 @@ public class TesterFord {
         AutomovilFord auto = new AutomovilFord();
 		auto.encenderMotor();
 		System.out.println("El auto " + auto.marca + " " + auto.modelo + " " + auto.color + " ha sido creado!");
-		while(auto.getVelocidad < 200){
+		while(auto.getVelocidad() < 200){
 			auto.acelerar();
 		}
 		auto.frenar(6000);
