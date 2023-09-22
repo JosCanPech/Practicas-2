@@ -1,0 +1,170 @@
+package alumnopractica3;
+
+public class Alumno3 {
+    
+    String nombre, carrera;
+    int matricula, grado;
+    String grupo;
+    Tutor tutor;
+    /*
+    public Alumno3(){      
+    }*/
+    
+    public Alumno3(String nombre, String carrera, int matricula, int grado, String grupo, Tutor tutor ){
+        this.nombre = nombre;
+        this.carrera = carrera;
+        this.matricula = matricula;
+        this.grado = grado;
+        this.grupo = grupo;
+        this.tutor = tutor;
+    }
+    
+    //Encapsulamiento
+    /*public String getNombre(){
+        return nombre;
+    }
+    
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public String getCarrera(){
+        return carrera;
+    }
+    
+    public void setCarrera(String carrera){
+        this.carrera = carrera;
+    }
+    
+    public int getMatricula(){
+        return matricula;
+    }
+    
+    public void setMatricula(int matricula){
+        this.matricula = matricula;
+    }
+    
+    public int getGrado(){
+        return grado;
+    }
+    
+    public void setGrado(int grado){
+        this.grado = grado;
+    }
+    
+    public String getGrupo(){
+        return grupo;
+    }
+    
+    public void setGrupo(String grupo){
+        this.grupo = grupo;
+    }*/
+    
+    public Tutor getTutor(){
+        return tutor;
+    }
+    
+    public void setTutor(Tutor tutor){
+        this.tutor = tutor;
+    }
+
+}
+
+ class Tutor{
+     
+     String nombre;
+     int edad;
+     Telefono telefono;
+     //String telefono;
+     /*
+     public Tutor(){    
+     }*/
+     
+     public Tutor(String nombre, int edad, Telefono telefono){
+         this.nombre = nombre;
+         this.edad = edad;
+         this.telefono = telefono;
+     }
+     /*
+     public String getNombre(){
+         return nombre;
+     }
+     
+     public void setNombre(String nombre){
+         this.nombre = nombre;
+     }
+     
+     public int getEdad(){
+         return edad;
+     }
+     
+     public void setEdad(int edad){
+         this.edad = edad;
+     }*/
+     
+     /*public String getTelefono(){
+         return telefono;
+     }
+     
+     public void setTelefono(String telefono){
+         this.telefono = telefono;
+     }*/
+     
+     public Telefono getTelefono(){
+         return telefono;
+     }
+     
+     public void setTelefono(Telefono telefono){
+         this.telefono = telefono;
+     }
+       
+}
+
+class Telefono{
+    
+    String codigo,lada,numero;
+    
+    /*public Telefono(){        
+    }*/
+    
+    public Telefono(String codigo, String lada, String numero){
+        this.codigo = codigo;
+        this.lada = lada;
+        this.numero = numero;
+    }
+    
+    /*
+    public String getCodigo(){
+        return codigo;
+    }
+    
+    public void setCodigo(String codigo){
+        this.codigo = codigo;
+    }
+    
+    public String getLada(){
+        return lada;
+    }
+    
+    public void setLada(String lada){
+        this.lada = lada;
+    }
+    
+    public String getNumero(){
+        return numero;
+    }
+    
+    public void setNumero(String numero){
+        this.numero = numero;
+    }*/
+
+    @Override
+    public String toString() {
+        return "Telefono{" + "codigo=" + codigo + ", lada=" + lada + ", numero=" + numero + '}';
+    }
+    
+    
+            
+     
+ }   
+   
