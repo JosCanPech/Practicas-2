@@ -1,0 +1,19 @@
+package alumnopractica3;
+
+public class AlumnoPractica3 {
+
+    public static void main(String[] args) {
+    
+        Telefono telefono1 = new Telefono("+52","981","981144473");
+        Tutor tutor = new Tutor("Mamá",38,telefono1);
+        Alumno3 Alu1 = new Alumno3("Alu1","Sistemas", 8967,3, "B",tutor);
+        
+        /*Alumno3 auto = new Alumno3("ingrid", "sistemas", 8967,3,"a");
+        Alumno3.Tutor tutor1 = auto.new Tutor("mama",38);
+        Alumno3.Telefono tel1 = auto.new Telefono("+52","981","9811457858");*/
+        
+        String telefono = Alu1.getTutor().getTelefono().toString();
+        System.out.println("Telefono tutor: "+telefono);
+    
+    }
+}
