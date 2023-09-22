@@ -1,13 +1,17 @@
 package testerford;
 
+/**
+ *
+ * @author josue
+ */
 public class AutomovilFord {
     
         int velocidad;						// La velocidad a la que se desplaza el auto
 	String color;						// El color del auto
-	String modelo;					// El modelo del auto
+	public String modelo;					// El modelo del auto
 	Motor motor;						// El motor del auto
-	static final String marca = "Ford";	// La marca del auto
-        int getVelocidad;
+	public static final String marca = "Ford";	// La marca del auto
+        //int getVelocidad;
 		
 	/**
 	* Inicializa un nuevo objeto Automovil.
@@ -33,7 +37,7 @@ public class AutomovilFord {
 	* Enciende el motor del automovil.
 	*/
 	public void encenderMotor() {
-		motor.encendido = true;
+		motor.setEncendido(true);
 		System.out.println("Motor encendido");
 	}
 	
@@ -41,7 +45,7 @@ public class AutomovilFord {
 	* Apaga el motor del automovil.
 	*/
 	public void apagarMotor() {
-		motor.encendido = false;
+		motor.setEncendido(false);
 		System.out.println("Motor apagado");
 	}
 	
@@ -51,9 +55,9 @@ public class AutomovilFord {
 	* @param cantidad: El número de km/h en que aumentará la velocidad del auto.
 	*/
 	public void acelerar() {
-		if (motor.encendido) {
+		if (motor.getEncendido()) {
 			motor.revolucionar();			
-			velocidad = (motor.revoluciones / 100);
+			velocidad = (motor.getRevoluciones() / 100);
 			System.out.println("Vamos a " + velocidad + " kph");			
 		} else {
 			System.out.println("El motor está apagado!");
@@ -62,10 +66,9 @@ public class AutomovilFord {
 	
 	/**
 	* Reduce a cero la velocidad del auto.
-     * @param getRevoluciones
 	*/
-	public void frenar(int getRevoluciones) {
-		
+	public void frenar(int cantidad) {
+		motor.setRevoluciones(cantidad);
 		if(velocidad < 0) velocidad = 0;
 		System.out.println("Vamos a " + velocidad + " kph");	
 	}
