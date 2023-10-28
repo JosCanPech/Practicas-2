@@ -11,11 +11,11 @@ public class BatallaPokemon {
 
     public static void main(String[] args) {
       
-        Blastoise Blastoise = new Blastoise("Blastoise",1,79,83,100,85,105,78);
+        Blastoise Blastoise = new Blastoise("Blastoise",50,186,148,167,150,172,143);
         
-        Pidgey pidgey = new Pidgey("Pidgey",Tipo.NORMAL,1,40,45,40,35,35,56);
+        Pidgey pidgey = new Pidgey("Pidgey",Tipo.NORMAL,50,284,207,196,185,185,232);
         
-        Pidgey2T pidgey2 = new Pidgey2T("Pidgey",Tipo.NORMAL,Tipo.VOLADOR,1,40,45,40,35,35,56);
+        Pidgey2T pidgey2 = new Pidgey2T("Pidgey",Tipo.NORMAL,Tipo.VOLADOR,50,284,189,179,169,169,211);
        
         
 //PokemonIce Sealeo = new PokemonIce("Sealeo",10);
@@ -24,7 +24,7 @@ public class BatallaPokemon {
         
         Blastoise.atacar(0, pidgey,Tipo.NORMAL,TipoMovimiento.FISICO);
         
-        pidgey2.atacar(0, Blastoise,Tipo.AGUA,TipoMovimiento.FISICO);;
+        pidgey2.atacar(1, Blastoise,Tipo.AGUA,TipoMovimiento.FISICO);;
          
     }
     
