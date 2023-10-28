@@ -5,19 +5,18 @@ public class Movimiento {
     
     private String nombre;
     private int puntosDeAtaque;
-    private Tipo Tipo;
+    private TipoMovimiento TipoMovimiento;
     private int pp;
     
     private Movimiento[] movimientos;
     
-    public Movimiento(String nombre, int puntosDeAtaque, Tipo Tipo, int pp){
+    public Movimiento(String nombre, int puntosDeAtaque,TipoMovimiento TipoMovimiento,int pp){
         this.nombre = nombre;
         this.puntosDeAtaque = puntosDeAtaque;
-        this.Tipo = Tipo;
+        this.TipoMovimiento = TipoMovimiento;
         this.pp = pp;
         this.movimientos = new Movimiento [4];
-        
-    }
+            }
     
     public String getNombre(){
         return nombre;
@@ -43,21 +42,30 @@ public class Movimiento {
         this.pp = Pp;
     }
       
-    public Tipo getTipo(){
+   /* public Tipo getTipo(){
         return Tipo;
     }
 
     public void setTipo(Tipo Tipo) {
         this.Tipo = Tipo;
-    }
-
-    /*public Movimiento[] getMovimientos() {
+    }*/
+    
+    public Movimiento[] getMovimientos() {
         return movimientos;
     }
 
     public void setMovimientos(Movimiento[] movimientos) {
         this.movimientos = movimientos;
-    }*/
+    }
+
+    public TipoMovimiento getTipoMovimiento() {
+        return TipoMovimiento;
+    }
+
+    public void setTipoMovimiento(TipoMovimiento TipoMovimiento) {
+        this.TipoMovimiento = TipoMovimiento;
+    }
+    
     
     
 }
