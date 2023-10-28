@@ -1,16 +1,5 @@
 package Pokemon;
 
-import static Pokemon.Tipo.ACERO;
-import static Pokemon.Tipo.AGUA;
-import static Pokemon.Tipo.BICHO;
-import static Pokemon.Tipo.ELECTRICO;
-import static Pokemon.Tipo.FUEGO;
-import static Pokemon.Tipo.HADA;
-import static Pokemon.Tipo.LUCHA;
-import static Pokemon.Tipo.PLANTA;
-import static Pokemon.Tipo.ROCA;
-import static Pokemon.Tipo.TIERRA;
-
 public class Blastoise extends Pokemon
         implements ClaseInterfaz{
     
